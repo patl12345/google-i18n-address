@@ -32,7 +32,7 @@ def load_validation_data(country_code='all'):
     if not os.path.exists(path):
         raise ValueError(
             '%r is not a valid country code' % (country_code,))
-    with open(path) as data:
+    with open(path, encoding='utf-8') as data:
         return json.load(data)
 
 
